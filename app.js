@@ -16,7 +16,12 @@ app.get('/',(req, res)=>{
     // res.send("hii")
     res.render("index")
 })
-
+app.get('/conform-now', (req, res)=>{
+    res.render('conform-now')
+})
+app.get('/earning-disclamer',(req, res)=>{
+    res.render('earning-disclamer')
+})
 app.listen('3000')
 
 export default app
