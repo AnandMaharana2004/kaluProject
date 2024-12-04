@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goforbuy.us</title>
     <link rel="stylesheet" href="../public/styleshets/inde.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -13,7 +14,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             font-family: "Roboto", sans-serif;
 
         }
@@ -110,7 +112,89 @@
             color: #4573B9;
         }
 
-        @media (max-width: 767px) {}
+        .none {
+            display: none;
+        }
+        .icon{
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            .nav {
+                padding: 1rem;
+            }
+
+            .section {
+                /* display: flex; */
+                /* align-items: center; */
+                /* justify-content: center; */
+                text-align: justify;
+                padding: 2.5rem;
+
+            }
+
+            .card {
+                width: auto;
+                padding: 1rem;
+            }
+
+            .card-a {
+                color: darkblue;
+                font-size: .8rem;
+                margin-top: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .ul {
+                display: none;
+            }
+
+            .flowting-item-div {
+                border-top: 1px solid #000;
+                background-color: #fff;
+            }
+
+            .flowting-item-div a {
+                color: #000;
+                font-size: .9rem;
+            }
+
+            .ul-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 0 1rem;
+                padding-top: 2rem;
+            }
+
+            .footer {
+                padding: .4rem;
+                font-size: .7rem;
+                position: fixed;
+                bottom: 0;
+            }
+
+            .card h2 {
+                margin-top: 1.2rem;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+
+            .card p {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            .icon{
+            display: flex;
+        }
+
+        }
     </style>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
@@ -129,8 +213,20 @@
                     <li><a href="">Thank You Page</a></li>
                     <li></li>
                 </ul>
+                 <i class="fa-solid fa-bars icon" id="manu"></i>
             </div>
         </nav>
+        <div class="flowting-item-div none" id="flot-div">
+            <ul class="ul-2">
+                <li><a href="/conform-now">Conform Now</a></li>
+                <li><a href="/earning-disclamer">Earning Disclamer</a></li>
+                <li><a href="">Opt-in Page</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms and Services</a></li>
+                <li><a href="">Thank You Page</a></li>
+                <li></li>
+            </ul>
+        </div>
         <section class="section">
             <div class="card">
                 <a href="" class="card-a">Uncategorized</a>
@@ -144,6 +240,15 @@
             Copyright © 2024 goforbuy.us | Powered by <a href="" class="footerLink">Astra WordPress Theme</a>
         </footer>
     </div>
+
+    <script>
+        const manueButton = document.getElementById("manu")
+        const flotDiv = document.getElementById("flot-div")
+        manueButton.addEventListener("click", () => {
+            flotDiv.classList.toggle("none")
+            console.log(flotDiv.classList);
+        })
+    </script>
 </body>
 
 </html>
