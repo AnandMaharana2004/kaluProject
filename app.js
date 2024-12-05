@@ -22,6 +22,15 @@ app.get('/conform-now', (req, res)=>{
 app.get('/earning-disclamer',(req, res)=>{
     res.render('earning-disclamer')
 })
+app.get('/otp-in-page',(req, res)=>{
+    res.render('otp-in-page')
+})
+app.get('/privacy-policy', (req, res)=>{
+    res.render('privacy-policy')
+})
+app.get('/terms-services', (req, res)=>{
+    res.render('terms-services')
+})
 app.listen('3000')
 
 export default app

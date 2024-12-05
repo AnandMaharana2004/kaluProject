@@ -21,7 +21,7 @@
         }
 
 
-        body .wrapper {
+        .wrapper {
             height: 100vh;
             width: 100vw;
             background-color: #F0F5FA;
@@ -34,7 +34,7 @@
         }
 
         .nav {
-            width: 100%;
+            width: auto;
             padding: 1.5rem;
             display: flex;
             justify-content: space-between;
@@ -49,6 +49,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             gap: 2rem;
             margin-left: 1rem;
         }
@@ -61,6 +62,7 @@
         .logo {
             font-size: 2rem;
             font-weight: 500;
+            padding: 0 auto;
         }
 
         .section {
@@ -115,11 +117,28 @@
         .none {
             display: none;
         }
-        .icon{
+
+        .icon {
             display: none;
         }
 
-        @media (max-width: 767px) {
+        @media (min-width: 768px) and (max-width: 1170px) {
+            .nav {
+                padding: 1rem;
+            }
+            .logo{
+                font-size: 1.4rem;
+            }
+            .section{
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 990px) {
             .logo {
                 font-size: 1.5rem;
                 font-weight: 400;
@@ -190,9 +209,10 @@
                 font-size: 1rem;
                 font-weight: 300;
             }
-            .icon{
-            display: flex;
-        }
+
+            .icon {
+                display: flex;
+            }
 
         }
     </style>
@@ -207,22 +227,22 @@
                 <ul class="ul">
                     <li><a href="/conform-now">Conform Now</a></li>
                     <li><a href="/earning-disclamer">Earning Disclamer</a></li>
-                    <li><a href="">Opt-in Page</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms and Services</a></li>
+                    <li><a href="/otp-in-page">Opt-in Page</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-services">Terms and Services</a></li>
                     <li><a href="">Thank You Page</a></li>
                     <li></li>
                 </ul>
-                 <i class="fa-solid fa-bars icon" id="manu"></i>
+                <i class="fa-solid fa-bars icon" id="manu"></i>
             </div>
         </nav>
         <div class="flowting-item-div none" id="flot-div">
             <ul class="ul-2">
                 <li><a href="/conform-now">Conform Now</a></li>
                 <li><a href="/earning-disclamer">Earning Disclamer</a></li>
-                <li><a href="">Opt-in Page</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms and Services</a></li>
+                <li><a href="/otp-in-page">Opt-in Page</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-services">Terms and Services</a></li>
                 <li><a href="">Thank You Page</a></li>
                 <li></li>
             </ul>
