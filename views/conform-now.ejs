@@ -141,13 +141,35 @@
         <h1 class="heading">Almost Done</h1>
         <h1 class="sub-heading">Confirm Your Email</h1>
         <h4>Enter Your Email Below to Confirm</h4>
-        <form  class="form">
+        <form class="form" id="contactForm">
             <input type="text" placeholder="Enter Your Email" class="input">
             <input type="submit" value="Confirm Now" class="confirm-button input">
         </form>
         <h3>Email Verification required. Access details and a Special Bonus will be sent to the email adress above</h3>
         <p><a href="">Privacy Policy </a>| <a href="">Terms of Services </a>| <a href="">Earning Disclaimer</a></p>
     </div>
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const response = await fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, message }),
+            });
+
+            if (response.ok) {
+                alert('Email sent successfully!');
+            } else {
+                alert('Failed to send email. Please try again.');
+            }
+        });
+    </script>
 </body>
 
 </html>
