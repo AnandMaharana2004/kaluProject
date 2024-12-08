@@ -142,7 +142,7 @@
         <h1 class="sub-heading">Confirm Your Email</h1>
         <h4>Enter Your Email Below to Confirm</h4>
         <form class="form" id="contactForm">
-            <input type="text" placeholder="Enter Your Email" class="input">
+            <input type="text" placeholder="Enter Your Email" class="input" id="email">
             <input type="submit" value="Confirm Now" class="confirm-button input">
         </form>
         <h3>Email Verification required. Access details and a Special Bonus will be sent to the email adress above</h3>
@@ -153,14 +153,14 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            // const message = document.getElementById('message').value;
 
-            const response = await fetch('/send-email', {
+            const response = await fetch('/sendEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, message }),
+                body: JSON.stringify({ email }),
             });
 
             if (response.ok) {
