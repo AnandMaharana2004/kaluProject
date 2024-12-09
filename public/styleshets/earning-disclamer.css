@@ -1,0 +1,54 @@
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 5rem;
+}
+
+h1 {
+    color: #6E92E4;
+    font-size: 2.1rem;
+    margin: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.down-div {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.lower-p {
+    font-weight: 600;
+}
+
+.mainDiv {
+    text-align: justify;
+}
+
+.main-p {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    vertical-align: baseline
+}
+
+/* Styles for landscape orientation */
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 1rem;
+    }
+}

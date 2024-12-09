@@ -15,3 +15,8 @@ the next plan is make the rest pages and apter that work on email section
 
 
 overal the frontend work is finish it's time to work on backend which is just send a email to the owner of the website and it's like the user's email 
+
+
+separation of conson
+
+i think there is a problem on the responsiveness or on the @mediaquery so firt fix the error then just host it free😁 
